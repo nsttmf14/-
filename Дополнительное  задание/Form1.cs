@@ -24,6 +24,8 @@ namespace Дополнительное__задание
         private void button1_Click(object sender, EventArgs e)
         {
             logger.Trace("Загружаются студенты 09-121 группы");
+            LogRTB.Text += "Загружаются студенты 09-121 группы \n";
+
             TreeView.Nodes[0].Nodes.Add(new TreeNode("Настя Тимофеева"));
             TreeView.Nodes[0].Nodes.Add(new TreeNode("Карим Муллаянов"));
             TreeView.Nodes[0].Nodes.Add(new TreeNode("Саша Кузнецов"));
@@ -31,6 +33,8 @@ namespace Дополнительное__задание
             TreeView.Nodes[0].Nodes.Add(new TreeNode("Ксюша Макарова"));
 
             logger.Trace("Загружаются студенты 09-122 группы");
+            LogRTB.Text += "Загружаются студенты 09-122 группы \n";
+
             TreeView.Nodes[1].Nodes.Add(new TreeNode("Даниль Юринов"));
             TreeView.Nodes[1].Nodes.Add(new TreeNode("Марьям Ахметсафина"));
             TreeView.Nodes[1].Nodes.Add(new TreeNode("Лена Конышева"));
@@ -42,6 +46,7 @@ namespace Дополнительное__задание
             LoadList();
 
             logger.Trace("Распределение картинок");
+            LogRTB.Text += "Распределение картинок \n";
 
             int n = rnd.Next(5);
             pictureBox1.Image = images[n];
@@ -64,6 +69,7 @@ namespace Дополнительное__задание
             images.RemoveAt(n);
 
             logger.Trace("Очистка листа");
+            LogRTB.Text += "Очистка листа \n";
 
             images.Clear();
         }
@@ -71,6 +77,8 @@ namespace Дополнительное__задание
         private void LoadList()
         {
             logger.Trace("Загрузка картинок в лист");
+            LogRTB.Text += "Загрузка картинок в лист \n";
+
             images.Add(Properties.Resources._1);
             images.Add(Properties.Resources._2);
             images.Add(Properties.Resources._3);
@@ -81,6 +89,7 @@ namespace Дополнительное__задание
         private void button2_Click(object sender, EventArgs e)
         {
             logger.Trace("Перераспределение картинок началось");
+            LogRTB.Text += "Перераспределение картинок началось \n";
             RecastImages();
         }
 
@@ -89,6 +98,7 @@ namespace Дополнительное__задание
             try
             {
                 logger.Trace("Создание и заполнение доп.формы");
+                LogRTB.Text += "Создание и заполнение доп.формы \n";
 
                 AdditionlForm adForm = new AdditionlForm();
 
@@ -101,12 +111,14 @@ namespace Дополнительное__задание
                 adForm.Group.Text = TreeView.SelectedNode.Text;
 
                 logger.Trace("Показ формы");
+                LogRTB.Text += "Показ формы \n";
 
                 adForm.Show();
             }
             catch
             {
                 logger.Error("Группа не была выбрана");
+                ErrorRTB.Text += "Группа не была выбрана \n";
                 MessageBox.Show("Сначала выберите группу", "Ошибка");
             }
         }

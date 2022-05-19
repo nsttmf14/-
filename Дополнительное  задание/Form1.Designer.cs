@@ -29,16 +29,16 @@ namespace Дополнительное__задание
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("09-121");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("09-122");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("09-121");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("09-122");
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.TreeView = new System.Windows.Forms.TreeView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.LogRTB = new System.Windows.Forms.RichTextBox();
+            this.ErrorRTB = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -109,13 +109,13 @@ namespace Дополнительное__задание
             this.TreeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TreeView.Location = new System.Drawing.Point(0, 0);
             this.TreeView.Name = "TreeView";
-            treeNode1.Name = "121Node";
-            treeNode1.Text = "09-121";
-            treeNode2.Name = "122Node";
-            treeNode2.Text = "09-122";
+            treeNode3.Name = "121Node";
+            treeNode3.Text = "09-121";
+            treeNode4.Name = "122Node";
+            treeNode4.Text = "09-122";
             this.TreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
+            treeNode3,
+            treeNode4});
             this.TreeView.Size = new System.Drawing.Size(266, 266);
             this.TreeView.TabIndex = 0;
             // 
@@ -132,7 +132,7 @@ namespace Дополнительное__задание
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.richTextBox1);
+            this.tabPage1.Controls.Add(this.LogRTB);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -143,7 +143,7 @@ namespace Дополнительное__задание
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.richTextBox2);
+            this.tabPage2.Controls.Add(this.ErrorRTB);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -152,23 +152,23 @@ namespace Дополнительное__задание
             this.tabPage2.Text = "Вкладка 2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // LogRTB
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(3, 3);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(786, 88);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.LogRTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LogRTB.Location = new System.Drawing.Point(3, 3);
+            this.LogRTB.Name = "LogRTB";
+            this.LogRTB.Size = new System.Drawing.Size(786, 88);
+            this.LogRTB.TabIndex = 0;
+            this.LogRTB.Text = "";
             // 
-            // richTextBox2
+            // ErrorRTB
             // 
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox2.Location = new System.Drawing.Point(3, 3);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(786, 88);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "";
+            this.ErrorRTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ErrorRTB.Location = new System.Drawing.Point(3, 3);
+            this.ErrorRTB.Name = "ErrorRTB";
+            this.ErrorRTB.Size = new System.Drawing.Size(786, 88);
+            this.ErrorRTB.TabIndex = 0;
+            this.ErrorRTB.Text = "";
             // 
             // button1
             // 
@@ -205,6 +205,7 @@ namespace Дополнительное__задание
             this.pictureBox5.Location = new System.Drawing.Point(284, 17);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(122, 105);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
             // 
@@ -213,6 +214,7 @@ namespace Дополнительное__задание
             this.pictureBox4.Location = new System.Drawing.Point(24, 145);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(118, 106);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
@@ -221,6 +223,7 @@ namespace Дополнительное__задание
             this.pictureBox3.Location = new System.Drawing.Point(148, 73);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(130, 102);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
@@ -229,6 +232,7 @@ namespace Дополнительное__задание
             this.pictureBox2.Location = new System.Drawing.Point(284, 145);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(122, 106);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -237,6 +241,7 @@ namespace Дополнительное__задание
             this.pictureBox1.Location = new System.Drawing.Point(24, 17);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(118, 102);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -283,9 +288,9 @@ namespace Дополнительное__задание
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox LogRTB;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox ErrorRTB;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
